@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("one");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("two");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("ti");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("sad");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("bad");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("dad");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("kad");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,16 +46,18 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.LTest = new System.Windows.Forms.Label();
+            this.Domcheck = new System.Windows.Forms.CheckedListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(199, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 55);
+            this.label1.Size = new System.Drawing.Size(113, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add";
             // 
@@ -79,9 +88,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 206);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 25);
+            this.label4.Size = new System.Drawing.Size(86, 25);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Comapny :";
+            this.label4.Text = "Phone :";
             // 
             // label5
             // 
@@ -89,24 +98,25 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 249);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 25);
+            this.label5.Size = new System.Drawing.Size(77, 25);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Salary :";
+            this.label5.Text = "Email :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 293);
+            this.label6.Location = new System.Drawing.Point(12, 296);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Domains :";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // AddingB
             // 
             this.AddingB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddingB.Location = new System.Drawing.Point(209, 353);
+            this.AddingB.Location = new System.Drawing.Point(209, 414);
             this.AddingB.Name = "AddingB";
             this.AddingB.Size = new System.Drawing.Size(100, 43);
             this.AddingB.TabIndex = 6;
@@ -146,20 +156,72 @@
             this.textBox4.Size = new System.Drawing.Size(389, 31);
             this.textBox4.TabIndex = 10;
             // 
-            // textBox5
+            // LTest
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.textBox5.Location = new System.Drawing.Point(141, 293);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(389, 31);
-            this.textBox5.TabIndex = 11;
+            this.LTest.AutoSize = true;
+            this.LTest.Location = new System.Drawing.Point(335, 404);
+            this.LTest.Name = "LTest";
+            this.LTest.Size = new System.Drawing.Size(35, 13);
+            this.LTest.TabIndex = 14;
+            this.LTest.Text = "label7";
+            // 
+            // Domcheck
+            // 
+            this.Domcheck.CheckOnClick = true;
+            this.Domcheck.FormattingEnabled = true;
+            this.Domcheck.Items.AddRange(new object[] {
+            "Fintech",
+            "gaming",
+            "medcare",
+            "x",
+            "y",
+            "t",
+            "r",
+            "e",
+            "w",
+            "a",
+            "ad",
+            "dad"});
+            this.Domcheck.Location = new System.Drawing.Point(141, 296);
+            this.Domcheck.Name = "Domcheck";
+            this.Domcheck.Size = new System.Drawing.Size(388, 94);
+            this.Domcheck.TabIndex = 13;
+            // 
+            // listView1
+            // 
+            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.Default;
+            this.listView1.CheckBoxes = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
+            listViewItem4.StateImageIndex = 0;
+            listViewItem5.StateImageIndex = 0;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem7.StateImageIndex = 0;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7});
+            this.listView1.Location = new System.Drawing.Point(234, 296);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(215, 94);
+            this.listView1.TabIndex = 15;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 408);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(585, 469);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.LTest);
+            this.Controls.Add(this.Domcheck);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -172,7 +234,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Add";
-            this.Text = "Form1";
+            this.Text = "Add";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,6 +252,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label LTest;
+        private System.Windows.Forms.CheckedListBox Domcheck;
+        private System.Windows.Forms.ListView listView1;
     }
 }

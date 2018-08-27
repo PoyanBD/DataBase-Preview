@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class Add : Form
     {
+
         public Add()
         {
             InitializeComponent();
@@ -24,6 +25,20 @@ namespace WindowsFormsApp1
         }
 
         private void AddingB_Click(object sender, EventArgs e)
+        {
+            var detail = new List<string>();
+            detail.Add(textBox1.Text);
+            detail.Add(textBox2.Text);
+            detail.Add(textBox3.Text);
+            detail.Add(textBox4.Text);
+            
+            //string dom = Domcheck.Items[a1].ToString();
+            //detail.Add(dom);
+            string adding = string.Join(" ", detail.ToArray());
+            LTest.Text = adding ;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

@@ -31,6 +31,7 @@
             this.AddB = new System.Windows.Forms.Button();
             this.SearchB = new System.Windows.Forms.Button();
             this.AllB = new System.Windows.Forms.Button();
+            this.ListB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddB
@@ -51,6 +52,7 @@
             this.SearchB.TabIndex = 2;
             this.SearchB.Text = "search";
             this.SearchB.UseVisualStyleBackColor = true;
+            this.SearchB.Click += new System.EventHandler(this.SearchB_Click);
             // 
             // AllB
             // 
@@ -60,12 +62,23 @@
             this.AllB.TabIndex = 3;
             this.AllB.Text = "all";
             this.AllB.UseVisualStyleBackColor = true;
+            this.AllB.Click += new System.EventHandler(this.AllB_Click);
+            // 
+            // ListB
+            // 
+            this.ListB.Location = new System.Drawing.Point(504, 12);
+            this.ListB.Name = "ListB";
+            this.ListB.Size = new System.Drawing.Size(158, 111);
+            this.ListB.TabIndex = 4;
+            this.ListB.Text = "List";
+            this.ListB.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 144);
+            this.ClientSize = new System.Drawing.Size(676, 144);
+            this.Controls.Add(this.ListB);
             this.Controls.Add(this.AllB);
             this.Controls.Add(this.SearchB);
             this.Controls.Add(this.AddB);
@@ -80,6 +93,7 @@
         private System.Windows.Forms.Button AddB;
         private System.Windows.Forms.Button SearchB;
         private System.Windows.Forms.Button AllB;
+        private System.Windows.Forms.Button ListB;
     }
 }
 

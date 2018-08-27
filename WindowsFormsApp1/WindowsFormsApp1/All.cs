@@ -10,17 +10,23 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class search : Form
+    public partial class All : Form
     {
-        public search()
+        public All()
         {
             InitializeComponent();
         }
 
-        private void ModifyB_Click(object sender, EventArgs e)
+        public string Alltext
         {
-            Modify modify = new Modify();
-            modify.ShowDialog();
+            get
+            {
+                return this.TextAll.Text;
+            }
+            set
+            {
+                this.TextAll.Text = value;
+            }
         }
     }
 }

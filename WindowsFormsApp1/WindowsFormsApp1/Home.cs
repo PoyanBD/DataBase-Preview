@@ -22,5 +22,17 @@ namespace WindowsFormsApp1
             Add newadd = new Add();
             newadd.ShowDialog();
         }
+
+        private void SearchB_Click(object sender, EventArgs e)
+        {
+            search newsearch = new search();
+            newsearch.ShowDialog();
+        }
+
+        private void AllB_Click(object sender, EventArgs e)
+        {
+            All newall = new All();
+            newall.ShowDialog();
+        }
     }
 }
